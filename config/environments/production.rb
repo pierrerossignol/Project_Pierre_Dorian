@@ -82,11 +82,11 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
  :address              => "smtp.mailgun.org",
  :port                 => 587,
- :domain               => ENV['https://api.mailgun.net/v3/sandbox4982d5f6a0294e22b0afc699e5537366.mailgun.org'],
- :user_name            => ENV['postmaster@sandbox4982d5f6a0294e22b0afc699e5537366.mailgun.org'],
- :password             => ENV['486a55396e851e4a0fd5824797410a68'],
+ :domain               => 'https://api.mailgun.net/v3/sandbox4982d5f6a0294e22b0afc699e5537366.mailgun.org',
+ :user_name            => 'postmaster@sandbox4982d5f6a0294e22b0afc699e5537366.mailgun.org',
+ :password             => '486a55396e851e4a0fd5824797410a68',
  :authentication       => :plain,
-:enable_starttls_auto => true
+ :enable_starttls_auto => true
 }
   config.action_mailer.default_url_options = { host: 'https://afternoon-hollows-69948.herokuapp.com/' }
 end
