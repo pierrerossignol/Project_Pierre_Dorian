@@ -19,23 +19,22 @@ Gems à installer :
 •	Admin -> Administrate (gem)
 •	Carte -> API Google
 
-Etapes nouvelle branche
+Etapes nouvelle branche :
 1°) git checkout develop 
 2°) git pull origin develop
 
-Ajout feature/devise :
-Routes -> authentifier
-Model user
-
-Ajout feature/mailgun :
-Envoi de mail de confirmation pour inscription.
-
 Infos :
-
 Index+new+edit+destroy = scaffold_controller
 1 ou 2 = rails generate controller 
 
+NOUVELLES FEATURES : 
 
+Ajout feature/devise :
+Routes -> authentifier
+Model user.
+
+Ajout feature/mailgun :
+Envoi de mail de confirmation pour inscription.
 
 
 
