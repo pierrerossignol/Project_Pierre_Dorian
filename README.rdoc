@@ -36,5 +36,9 @@ Model user.
 Ajout feature/mailgun :
 Envoi de mail de confirmation pour inscription.
 
+Ajout feature/administrate
+
+Ajout feature/users
+
 
 
