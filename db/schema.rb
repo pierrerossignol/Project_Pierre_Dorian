@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161214094306) do
+ActiveRecord::Schema.define(version: 20161214144633) do
 
   create_table "service_types", force: :cascade do |t|
     t.string   "name"
@@ -22,12 +22,19 @@ ActiveRecord::Schema.define(version: 20161214094306) do
   create_table "services", force: :cascade do |t|
     t.string   "participants_name"
     t.string   "name"
-    t.integer  "time_spent"
     t.text     "description"
     t.integer  "service_type_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.integer  "user_id"
+    t.boolean  "confirmation"
+    t.datetime "event_at"
+    t.decimal  "participants_number"
+    t.float    "time_spent"
+    t.string   "place"
   end
+
+  add_index "services", ["user_id"], name: "index_services_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -47,6 +54,15 @@ ActiveRecord::Schema.define(version: 20161214094306) do
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.boolean  "role"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "address"
+    t.string   "city"
+    t.string   "postal_code"
+    t.decimal  "age"
+    t.string   "job"
+    t.string   "skills"
+    t.string   "rating"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
