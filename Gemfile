@@ -23,6 +23,8 @@ gem 'mailgun-ruby', '~>1.1.2'
 gem 'administrate', '~> 0.3.0'
 # Use bourbon gem
 gem 'bourbon'
+# Use bootstrap gem for design
+gem 'bootstrap-sass', '~> 3.3.6'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
