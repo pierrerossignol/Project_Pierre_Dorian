@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<p><%= @service.name %></p>
+<p><%= @service.description %></p>
+<p><%= @service.participants_name %></p>
+<p><%= @service.time_spent %></p>
+<p><%= @service.description %></p>
+
+
+<%- if @services.size > 0 %>
+  <ul>
+    <%= @services.each do |service| %>
+    <%= link_to 'Edit', edit_service_type_path(service)  %>
+    <%= link_to 'Delete',  service_type_path(service)  %>
+    <% end%>
+  </ul>
+<% end%>
