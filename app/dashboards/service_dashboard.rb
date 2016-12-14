@@ -15,7 +15,7 @@ class ServiceDashboard < Administrate::BaseDashboard
     participants_number: Field::Number,
     place: Field::String,
     name: Field::String,
-    time_spent: Field::Float,
+    time_spent: Field::Number,
     description: Field::Text,
     confirmation: Field::Boolean,
     event_at: Field::DateTime,

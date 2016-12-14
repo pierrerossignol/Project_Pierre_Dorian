@@ -9,8 +9,8 @@
 <%- if @services.size > 0 %>
   <ul>
     <%= @services.each do |service| %>
-    <%= link_to 'Edit', edit_service_type_path(service)  %>
-    <%= link_to 'Delete',  service_type_path(service)  %>
+    <%= link_to 'Edit', edit_service_path(service)  %>
+    <%= link_to 'Delete',  service_path(service)  %>
     <% end%>
   </ul>
 <% end%>
