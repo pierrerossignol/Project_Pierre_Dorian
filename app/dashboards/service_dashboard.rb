@@ -10,9 +10,12 @@ class ServiceDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     service_type: Field::BelongsTo,
     id: Field::Number,
+    user: Field::BelongsTo,
     participants_name: Field::String,
+    participants_number: Field::Number,
+    place: Field::String,
     name: Field::String,
-    time_spent: Field::Number,
+    time_spent: Field::Float,
     description: Field::Text,
     confirmation: Field::Boolean,
     event_at: Field::DateTime,
@@ -28,7 +31,7 @@ class ServiceDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :id,
     :service_type,
-    :participants_name,
+    :user,
     :name,
     :confirmation,
   ].freeze
@@ -37,9 +40,12 @@ class ServiceDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
+    :user,
     :service_type,
     :confirmation,
     :participants_name,
+    :participants_number,
+    :place,
     :name,
     :time_spent,
     :description,
@@ -55,6 +61,7 @@ class ServiceDashboard < Administrate::BaseDashboard
     :service_type,
     :confirmation,
     :participants_name,
+    :participants_number,
     :name,
     :time_spent,
     :description,
