@@ -9,6 +9,13 @@ class UserDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     id: Field::Number,
+    first_name: Field::String,
+    last_name: Field::String,
+    adress: Field::String,
+    age: Field::Number,
+    job: Field::String,
+    skills: Field::String,
+    rating: Field::String,
     email: Field::String,
     role: Field::Boolean,
     remember_created_at: Field::DateTime,
@@ -36,6 +43,13 @@ class UserDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = [
     :id,
+    :first_name,
+    :last_name,
+    :adress,
+    :age,
+    :job,
+    :skills,
+    :rating,
     :email,
     :role,
     :remember_created_at,
@@ -51,6 +65,13 @@ class UserDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
+    :first_name,
+    :last_name,
+    :adress,
+    :age,
+    :job,
+    :skills,
+    :rating,
     :email,
     :role,
     :remember_created_at,
