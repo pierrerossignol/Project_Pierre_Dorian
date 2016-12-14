@@ -1,37 +1,44 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
-
 PROJET DORIAN / PIERRE
 
+Deadline : projet 18 janvier, présentation prête à 14h.
+
+Déroulement de la présentation :
+1°) Questions
+2°) Powerpoint : 
+-	étude de marché 
+-	business model
+-	présentation application
+3°) Démo
+
+Gems à installer :
 •	Authentification  -> Devise (gem)
 •	Recherche -> Ransack (gem)
 •	Mail -> mailgun (gem)
 •	Admin -> Administrate (gem)
 •	Carte -> API Google
+
+Etapes nouvelle branche :
+1°) git checkout develop 
+2°) git pull origin develop
+
+Infos :
+Index+new+edit+destroy = scaffold_controller
+1 ou 2 = rails generate controller 
+
+NOUVELLES FEATURES : 
+
+Ajout feature/devise :
+Routes -> authentifier
+Model user.
+
+Ajout feature/mailgun :
+Envoi de mail de confirmation pour inscription.
+
+Ajout feature/administrate
+
+Ajout feature/users
+
+
 

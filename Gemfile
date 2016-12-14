@@ -17,6 +17,12 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 # Use devise gem
 gem 'devise'
+# Use mailgun gem
+gem 'mailgun-ruby', '~>1.1.2'
+# Use administrate gem
+gem 'administrate', '~> 0.3.0'
+# Use bourbon gem
+gem 'bourbon'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
