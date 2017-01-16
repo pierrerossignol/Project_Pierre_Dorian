@@ -2,9 +2,16 @@ class ConversationsController < ApplicationController
  before_action :authenticate_user!
 
 def index
- @users = User.all
- @conversations = Conversation.all
+ if current_user.try(:role)
+  @users = User.all
+ else
+  st_ids = current_user.services.map {|s| s.service_type_id}.uniq
+  skills = Skill.where(service_type_id: st_ids).where.not(user_id: current_user.id)
+ 
+  @users = skills.map {|s| s.user}
  end
+ @conversations = Conversation.all
+end
 
 def create
  if Conversation.between(params[:sender_id],params[:recipient_id])

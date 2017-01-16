@@ -3,9 +3,7 @@ Rails.application.routes.draw do
     resources :users
     resources :services
     resources :service_types
-    resources :conversations do
-    resources :messages
-    end    
+    resources :skills
   root to: "users#index"
   end
   
