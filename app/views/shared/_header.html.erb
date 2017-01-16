@@ -28,8 +28,10 @@
       <ul class="nav navbar-nav">
         <li><%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %></li>
       </ul>
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Instant Messaging', conversations_path %></li>
+      </ul>
       <% end %>
-      
 
     </div>
   </div>
