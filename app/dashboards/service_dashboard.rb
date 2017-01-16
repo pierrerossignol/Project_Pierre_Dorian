@@ -71,6 +71,6 @@ class ServiceDashboard < Administrate::BaseDashboard
   # across all pages of the admin dashboard.
   #
    def display_resource(service)
-    "Service ##{service.name}"
+    service.name
    end
 end

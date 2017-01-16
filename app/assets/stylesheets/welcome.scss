@@ -1,3 +1,57 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+*{
+
+margin:0;
+
+padding:0;
+
+}
+
+ 
+
+body, html{height:100%;}
+
+body{
+    
+text-align:left;
+
+}
+
+ 
+
+#main{
+
+max-width:1280px;
+
+min-height:100%;
+
+margin:0 auto;
+
+position:relative;
+
+}
+
+ 
+
+footer{
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+
+padding-top:2px;
+
+height:30px;
+
+}
+
+footer2{
+
+position:absolute;
+
+bottom:0;
+
+width:100%;
+
+}
