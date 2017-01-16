@@ -29,12 +29,14 @@
             <li><%= link_to 'Proposer un service', new_service_path %></li>
           </ul>
         <% end %>
-        <ul class="nav navbar-nav">
-          <li><%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %></li>
-        </ul>
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Messagerie instantanée', conversations_path %></li>
+      </ul>
+      <ul class="nav navbar-nav">
+        <li><%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %></li>
+      </ul>
 
       <% end %>
-      
 
     </div>
   </div>
