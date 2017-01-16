@@ -1,16 +1,33 @@
 <p id="notice"><%= notice %></p>
-<p><%= @service.name %></p>
-<p><%= @service.description %></p>
-<p><%= @service.participants_name %></p>
-<p><%= @service.time_spent %></p>
-<p><%= @service.description %></p>
+<h1>Find a service by city :</h1>
+<%= search_form_for @q do |f| %>
 
+  <%= f.label :place_cont %>
+  <%= f.search_field :place_cont %>
+  
+  <%= f.label :hour_beginning_service_cont %>
+  <%= f.search_field :hour_beginning_service_cont %>
+  
+  <%= f.label :time_spent_cont %>
+  <%= f.search_field :time_spent_cont %>
+
+  <%= f.submit %>
 
 <%- if @services.size > 0 %>
+
+<% end %>
   <ul>
-    <%= @services.each do |service| %>
+    <% @services.each do |service| %>
     <%= link_to 'Edit', edit_service_path(service)  %>
     <%= link_to 'Delete',  service_path(service)  %>
+    <div class="paragraph">
+      <p><div class="name"><%= service.name %></div></p>
+      <p><%= service.description %></p>
+      <p><div class="participant_name"><%= service.participants_name %></div></p>
+      <p><%= service.time_spent %></p>
+      <p><%= service.description %></p>
+      <input type="submit" value="Je propose mon aide"> 
+    </div>
     <% end%>
   </ul>
 <% end%>
