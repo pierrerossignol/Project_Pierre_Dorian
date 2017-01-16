@@ -21,16 +21,27 @@
       <% end %>
       <% if user_signed_in? == true %> 
         <% if current_user.try(:role) %>
-            <ul class="nav navbar-nav">
-              <li><%= link_to 'Admin', admin_root_path %></li>
-            </ul>
+          <ul class="nav navbar-nav">
+            <li><%= link_to 'Admin', admin_root_path %></li>
+          </ul>
+        <% else %>
+          <ul class="nav navbar-nav">
+            <li><%= link_to 'Proposer un service', new_service_path %></li>
+          </ul>
         <% end %>
+<<<<<<< HEAD
       <ul class="nav navbar-nav">
         <li><%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %></li>
       </ul>
       <ul class="nav navbar-nav">
         <li><%= link_to 'Instant Messaging', conversations_path %></li>
       </ul>
+=======
+        <ul class="nav navbar-nav">
+          <li><%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %></li>
+        </ul>
+
+>>>>>>> 470f8caba6f26de793c3ca7df8aaabb8a5ecd73d
       <% end %>
 
     </div>
