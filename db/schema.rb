@@ -13,6 +13,26 @@
 
 ActiveRecord::Schema.define(version: 20170116144429) do
 
+
+  create_table "conversations", force: :cascade do |t|
+    t.integer  "sender_id"
+    t.integer  "recipient_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.text     "body"
+    t.integer  "conversation_id"
+    t.integer  "user_id"
+    t.boolean  "read",            default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id"
+  add_index "messages", ["user_id"], name: "index_messages_on_user_id"
+
   create_table "service_types", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
@@ -38,6 +58,11 @@ ActiveRecord::Schema.define(version: 20170116144429) do
 
   add_index "services", ["user_id"], name: "index_services_on_user_id"
 
+  create_table "skills", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "service_type_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "",    null: false
     t.string   "encrypted_password",     default: "",    null: false
@@ -62,7 +87,6 @@ ActiveRecord::Schema.define(version: 20170116144429) do
     t.string   "city"
     t.string   "postal_code"
     t.string   "job"
-    t.string   "skills"
     t.string   "rating"
     t.date     "birthdate"
     t.boolean  "premium_account"
