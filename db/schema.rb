@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116145054) do
+ActiveRecord::Schema.define(version: 20170116144429) do
 
   create_table "service_types", force: :cascade do |t|
     t.string   "name"
