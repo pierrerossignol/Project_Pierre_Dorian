@@ -13,6 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20170116144429) do
 
+
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
     t.integer  "recipient_id"
@@ -43,14 +44,16 @@ ActiveRecord::Schema.define(version: 20170116144429) do
     t.string   "name"
     t.text     "description"
     t.integer  "service_type_id"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.integer  "user_id"
     t.boolean  "confirmation"
     t.datetime "event_at"
     t.decimal  "participants_number"
     t.float    "time_spent"
     t.string   "place"
+    t.date     "date_service"
+    t.time     "hour_beginning_service"
   end
 
   add_index "services", ["user_id"], name: "index_services_on_user_id"
@@ -83,9 +86,10 @@ ActiveRecord::Schema.define(version: 20170116144429) do
     t.string   "address"
     t.string   "city"
     t.string   "postal_code"
-    t.decimal  "age"
     t.string   "job"
     t.string   "rating"
+    t.date     "birthdate"
+    t.boolean  "premium_account"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

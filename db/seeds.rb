@@ -1,3 +1,4 @@
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
@@ -28,3 +29,4 @@ s1 = ServiceType.where(name: 'déménagement').first
 sk = Skill.create(service_type: s1, user: u1)
 
 service = Service.create(service_type: s1, user: u, participants_name: 'Joseph, Eric', participants_number: 2, name: 'Baby-sitting Toulouse Ramonville', time_spent: 3, description: 'Bonjour, j aurais besoin que l on garde mon fils de 5 ans')
+

@@ -35,6 +35,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 #Design
 gem 'bootstrap-sass', '~> 3.3.6'
+#for research filter
+gem 'ransack'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -61,4 +63,5 @@ end
 gem 'rails_12factor', group: :production
 
 ruby "2.3.0"
+
 
