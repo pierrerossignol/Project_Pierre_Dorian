@@ -14,9 +14,8 @@
       <% if user_signed_in? == false %> 
       <ul class="nav navbar-nav">
         <li><%= link_to 'Connexion', new_user_session_path %></li>
-      </ul>
-      <ul class="nav navbar-nav">
         <li><%= link_to 'S\'inscrire', new_user_registration_path %></li>
+        <li><%= link_to 'Find a service', services_path %></li>
       </ul>
       <% end %>
       <% if user_signed_in? == true %> 
