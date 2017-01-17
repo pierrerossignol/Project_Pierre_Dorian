@@ -4,12 +4,30 @@
 
   <p><b>Lieu</b></p>
   <%= f.search_field :place_cont %>
-  
+
   <p><b>Heure de début du service</b></p>
   <%= f.search_field :hour_beginning_service_cont %>
   
   <p><b>Durée du service</b></p>
   <%= f.search_field :time_spent_cont %>
+  
+  <%= f.label :description_cont %>
+  <%= f.search_field :description_cont %>
+
+  <%= f.label :service_type_id_cont %>
+  <%= f.search_field :service_type_id_cont %>
+  
+  <%= f.label :participants_number_eq %>
+  <%= f.search_field :participants_number_eq %>
+  
+  <%= f.label :place_cont %>
+  <%= f.search_field :place_cont %>
+  
+  <%= f.label :date_service_cont %>
+  <%= f.search_field :date_service_cont %>
+  
+  <%= f.label :name_cont %>
+  <%= f.search_field :name_cont %>
 
   <%= f.submit %>
 
@@ -18,14 +36,15 @@
 <% end %>
   <ul>
     <% @services.each do |service| %>
-    <%= link_to 'Editer', edit_service_path(service)  %>
-    <%= link_to 'Supprimer',  service_path(service)  %>
-    <div class="paragraph">
-      <p>Nom<%= service.name %></p>
-      <p>Description<%= service.description %></p>
-      <p>Noms des participants<%= service.participants_name %></p>
-      <p>Durée du service<%= service.time_spent %></p>
-      <input type="submit" value="Je propose mon aide"> 
+
+  <div class="paragraph">
+    <p>Nom<%= service.name %></p>
+    <p>Description<%= service.description %></p>
+    <p>Noms des participants<%= service.participants_name %></p>
+    <p>Durée du service<%= service.time_spent %></p>
+    </script>
+
+
     </div>
     <% end%>
   </ul>
