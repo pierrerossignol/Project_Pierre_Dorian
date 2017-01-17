@@ -7,4 +7,6 @@ def age
 end
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
+  has_many :skills
+  has_many :services
 end
