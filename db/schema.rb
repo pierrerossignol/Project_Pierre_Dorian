@@ -13,7 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20170116161230) do
 
-
   create_table "conversations", force: :cascade do |t|
     t.integer  "sender_id"
     t.integer  "recipient_id"

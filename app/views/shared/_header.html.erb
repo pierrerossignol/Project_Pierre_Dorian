@@ -16,6 +16,7 @@
         <li><%= link_to 'Connexion', new_user_session_path %></li>
         <li><%= link_to 'S\'inscrire', new_user_registration_path %></li>
         <li><%= link_to 'Find a service', services_path %></li>
+        <li><%= link_to 'Create a service', new_service_path %></li>
       </ul>
       <% end %>
       <% if user_signed_in? == true %> 
