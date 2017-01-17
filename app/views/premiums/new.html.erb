@@ -1,20 +1,60 @@
-<%= form_tag premiums_path do %>
+<%= form_tag premiums_path, id: 'form_premium' do %>
   <article>
     <% if flash[:error].present? %>
       <div id="error_explanation">
         <p><%= flash[:error] %></p>
       </div>
     <% end %>
-    <label class="amount">
-      <span>Amount: $5.90</span>
-    </label>
   </article>
+				
+					<!-- PRICE ITEM -->
+					<div class="panel price panel-red">
+						<div class="panel-heading  text-center">
+						<h3>Compte premium</h3>
+						</div>
+						<div class="panel-body text-center">
+							<p class="lead" style="font-size:40px"><strong>5,99€ / mois</strong></p>
+						</div>
+						<ul class="list-group list-group-flush text-center">
+							<li class="list-group-item"><i class="icon-ok text-danger"></i>Services illimités</li>
+							<li class="list-group-item"><i class="icon-ok text-danger"></i>Mis en avant de vos services</li>
+							<li class="list-group-item"><i class="icon-ok text-danger"></i>Support technique 24h/24h</li>
+						</ul>
+						<div class="panel-footer">
+                <script src="https://checkout.stripe.com/checkout.js"></script>
+                <input type="hidden" id="stripeToken" name="stripeToken"/>
+                <button id="customButton" class="btn btn-lg btn-block btn-danger">S'ABONNER</button>
+                <script>
+									var handler = StripeCheckout.configure({
+									  key: "<%= Rails.configuration.stripe[:publishable_key] %>",
+									  locale: 'auto',
+									  token: function(token) {
+									    // You can access the token ID with `token.id`.
+									    // Get the token ID to your server-side code for use.
+									    document.getElementById('stripeToken').value = token.id;
+									    document.getElementById('form_premium').submit();
+									  }
+									});
+									
+									document.getElementById('customButton').addEventListener('click', function(e) {
+									  // Open Checkout with further options:
+									  handler.open({
+									    name: 'aVotreService',
+									    description: "Un mois d'abonnement compte Premium à AVotreService",
+									    currency: 'eur',
+									    email: "<%= current_user.email %>",
+									    amount: 599
+									  });
+									  e.preventDefault();
+									});
+									
+									// Close Checkout on page navigation:
+									window.addEventListener('popstate', function() {
+									  handler.close();
+									});
+									</script>
+						</div>
+					</div>
+					<!-- /PRICE ITEM -->
 
-  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="A month's subscription"
-          data-email="<%= current_user.email %>"
-          data-amount="590"
-          data-currency="eur"
-          data-locale="auto"></script>
 <% end %>
