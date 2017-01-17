@@ -11,6 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20170117103228) do
 
   create_table "conversations", force: :cascade do |t|
@@ -52,7 +53,7 @@ ActiveRecord::Schema.define(version: 20170117103228) do
     t.float    "time_spent"
     t.string   "place"
     t.date     "date_service"
-    t.time     "hour_beginning_service"
+    t.integer  "hour_beginning_service"
   end
 
   add_index "services", ["user_id"], name: "index_services_on_user_id"
