@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116144429) do
+ActiveRecord::Schema.define(version: 20170116161230) do
 
   create_table "service_types", force: :cascade do |t|
     t.string   "name"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20170116144429) do
     t.float    "time_spent"
     t.string   "place"
     t.date     "date_service"
-    t.time     "hour_beginning_service"
+    t.integer  "hour_beginning_service"
   end
 
   add_index "services", ["user_id"], name: "index_services_on_user_id"

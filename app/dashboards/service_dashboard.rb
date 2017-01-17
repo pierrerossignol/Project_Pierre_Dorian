@@ -16,12 +16,13 @@ class ServiceDashboard < Administrate::BaseDashboard
     place: Field::String,
     name: Field::String,
     time_spent: Field::Number,
-    hour_beginning_service: Field::DateTime,
+    hour_beginning_service: Field::Number,
     description: Field::Text,
     confirmation: Field::Boolean,
     event_at: Field::DateTime,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    date_service: Field::DateTime,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -67,6 +68,8 @@ class ServiceDashboard < Administrate::BaseDashboard
     :name,
     :time_spent,
     :description,
+    :date_service,
+    :hour_beginning_service,
   ].freeze
 
   # Overwrite this method to customize how services are displayed
