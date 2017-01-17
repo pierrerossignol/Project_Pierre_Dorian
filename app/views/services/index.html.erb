@@ -18,14 +18,13 @@
 <% end %>
   <ul>
     <% @services.each do |service| %>
-    <%= link_to 'Edit', edit_service_path(service)  %>
-    <%= link_to 'Delete',  service_path(service)  %>
+    <%= link_to 'Editer', edit_service_path(service)  %>
+    <%= link_to 'Supprimer',  service_path(service)  %>
     <div class="paragraph">
-      <p><div class="name"><%= service.name %></div></p>
-      <p><%= service.description %></p>
-      <p><div class="participant_name"><%= service.participants_name %></div></p>
-      <p><%= service.time_spent %></p>
-      <p><%= service.description %></p>
+      <p>Nom<%= service.name %></p>
+      <p>Description<%= service.description %></p>
+      <p>Noms des participants<%= service.participants_name %></p>
+      <p>Durée du service<%= service.time_spent %></p>
       <input type="submit" value="Je propose mon aide"> 
     </div>
     <% end%>

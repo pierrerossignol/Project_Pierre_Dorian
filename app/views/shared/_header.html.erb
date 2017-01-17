@@ -29,16 +29,26 @@
           </ul>
         <% end %>
       <ul class="nav navbar-nav">
+        <li><%= link_to 'Rechercher un service', services_path %></li>        
         <li><%= link_to 'Messagerie instantanée', conversations_path %></li>
       </ul>
+      <% if current_user.try(:premium_account) %>
+      <% else %>
+        <% if current_user.try(:role) %>
+        <% else %>
+          <ul class="nav navbar-nav">
+            <li><%= link_to 'Compte Premium', new_premium_path %></li>
+          </ul>
+        <% end %>
+      <% end %>
       <ul class="nav navbar-nav">
         <li><%= link_to 'Déconnexion', destroy_user_session_path, method: :delete %></li>
       </ul>
-
-      <% end %>
-      <ul class="nav navbar-nav">
-        <li><%= link_to 'Compte Premium', new_premium_path %></li>
+      <ul class="nav navbar-nav pull-right">
+        <li><%= link_to 'Connecté en tant que :' %></li>
+        <li><%= link_to current_user.email, root_path %></li>
       </ul>
+      <% end %>
     </div>
   </div>
 </nav>
