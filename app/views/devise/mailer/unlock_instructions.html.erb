@@ -1,0 +1,7 @@
+<p>Bonjour <%= @resource.email %>!</p>
+
+<p>Votre compte a été bloqué à cause d'un excès de tentatives de connexion.</p>
+
+<p>Cliquer sur le lien ci-dessous pour déverouiller votre compte:</p>
+
+<p><%= link_to 'Déverouiller mon compte', unlock_url(@resource, unlock_token: @token) %></p>

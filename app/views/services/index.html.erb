@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
-<h1>Find a service by city :</h1>
+<h1>Rechercher un service par ville :</h1>
 <%= search_form_for @q do |f| %>
 
-  <%= f.label :place_cont %>
+  <p><b>Lieu</b></p>
   <%= f.search_field :place_cont %>
   
-  <%= f.label :hour_beginning_service_cont %>
+  <p><b>Heure de début du service</b></p>
   <%= f.search_field :hour_beginning_service_cont %>
   
-  <%= f.label :time_spent_cont %>
+  <p><b>Durée du service</b></p>
   <%= f.search_field :time_spent_cont %>
 
   <%= f.submit %>
