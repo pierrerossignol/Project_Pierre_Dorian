@@ -12,14 +12,14 @@ User.delete_all
 s_t = ServiceType.create([{name: 'déménagement'}, {name: 'baby-sitting'}, {name: 'ménage'}, {name: 'livraison'}, {name: 'réparation'}])
 s0 = ServiceType.where(name: 'ménage').first
 
-
-u = User.new(password: '123456', first_name: 'Joseph', last_name: 'Dupond', address: '5 Résidence des jardins occitants', city: 'Ramonville', postal_code: 32000, birthdate:'04/12/1965', job:'Ingénieur aéronautique', rating: '4,7/5', email: 'jojo@gmail.com', role: false)
+u = User.new(password: '123456', first_name: 'Pierre', last_name: 'Rossignol', address: '5 avenue Belle-Isle', city: 'Rodez', postal_code: 12000, birthdate: '28/01/1994', job:'Développeur', rating: '5/5', email: 'pierre_rossignol@yahoo.fr', role: true)
 u.save
 u.confirm
 
+
 sk = Skill.create(service_type: s0, user: u)
 
-u1 = User.new(password: '123456', first_name: 'Pierre', last_name: 'Rossignol', address: '5 avenue Belle-Isle', city: 'Rodez', postal_code: 12000, birthdate: '28/01/1994', job:'Développeur', rating: '5/5', email: 'pierre_rossignol@yahoo.fr', role: true)
+u1 = User.new(password: '123456', first_name: 'Joseph', last_name: 'Dupond', address: '5 Résidence des jardins occitants', city: 'Ramonville', postal_code: 32000, birthdate:'04/12/1965', job:'Ingénieur aéronautique', rating: '4,7/5', email: 'jojo@gmail.com', role: false)
 u1.save
 u1.confirm
 
