@@ -1,36 +1,32 @@
 <p id="notice"><%= notice %></p>
-<h1>Rechercher un service par ville :</h1>
+<h1>Rechercher un service :</h1>
 <%= search_form_for @q do |f| %>
 
-  <p><b>Lieu</b></p>
-  <%= f.search_field :place_cont %>
+      <p><b>Lieu</b></p>
+      <%= f.search_field :place_cont %>
+    
+      <p><b>Heure de début</b></p>
+      <%= f.search_field :hour_beginning_service_cont %>
+      
+      <p><b>Durée</b></p>
+      <%= f.search_field :time_spent_cont %>
+    
+      <p><b>Description</b></p>
+      <%= f.search_field :description_cont %>
 
-  <p><b>Heure de début du service</b></p>
-  <%= f.search_field :hour_beginning_service_cont %>
-  
-  <p><b>Durée du service</b></p>
-  <%= f.search_field :time_spent_cont %>
-  
-  <%= f.label :description_cont %>
-  <%= f.search_field :description_cont %>
+      <p><b>Type</b></p>
+      <%= f.search_field :service_type_id_cont %>
+      
+      <p><b>Nombre de participants</b></p>
+      <%= f.search_field :participants_number_eq %>
+      
+      <p><b>Date</b></p>
+      <%= f.search_field :date_service_cont %>
+     
+      <p><b>Nom du service</b></p>
+      <%= f.search_field :name_cont %>
 
-  <%= f.label :service_type_id_cont %>
-  <%= f.search_field :service_type_id_cont %>
-  
-  <%= f.label :participants_number_eq %>
-  <%= f.search_field :participants_number_eq %>
-  
-  <%= f.label :place_cont %>
-  <%= f.search_field :place_cont %>
-  
-  <%= f.label :date_service_cont %>
-  <%= f.search_field :date_service_cont %>
-  
-  <%= f.label :name_cont %>
-  <%= f.search_field :name_cont %>
-
-  <%= f.submit %>
-
+    <%= f.submit %>
 <%- if @services.size > 0 %>
 
 <% end %>
