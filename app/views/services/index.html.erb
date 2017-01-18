@@ -1,49 +1,62 @@
 <p id="notice"><%= notice %></p>
-<h1>Find a service by city :</h1>
+<h1>Trouver un service :</h1>
 <%= search_form_for @q do |f| %>
-
-  <%= f.label :place_cont %>
-  <%= f.search_field :place_cont %>
-  
-  <%= f.label :hour_beginning_service_eq %>
-  <%= f.search_field :hour_beginning_service_eq %>
-  
-  <%= f.label :time_spent_cont %>
-  <%= f.search_field :time_spent_cont %>
-  
-  <%= f.label :description_cont %>
-  <%= f.search_field :description_cont %>
-
-  <%= f.label :service_type_id_cont %>
-  <%= f.search_field :service_type_id_cont %>
-  
-  <%= f.label :participants_number_eq %>
-  <%= f.search_field :participants_number_eq %>
-  
-  <%= f.label :place_cont %>
-  <%= f.search_field :place_cont %>
-  
-  <%= f.label :date_service_cont %>
-  <%= f.search_field :date_service_cont %>
-  
-  <%= f.label :name_cont %>
-  <%= f.search_field :name_cont %>
+    <form class="form-inline">
+      <div class="form-group">
+        <%= f.label :place_cont %>
+        <%= f.search_field :place_cont %>
+      </div>
+          
+      <div class="form-group">
+        <%= f.label :hour_beginning_service_eq %>
+        <%= f.search_field :hour_beginning_service_eq %>
+      </div>
+          
+      <div class="form-group">
+        <%= f.label :time_spent_cont %>
+        <%= f.search_field :time_spent_cont %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :description_cont %>
+        <%= f.search_field :description_cont %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :service_type %>
+        <%= f.collection_select :service_type_id, ServiceType.all, :id, :name %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :participants_number_eq %>
+        <%= f.search_field :participants_number_eq %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :date_service_cont %>
+        <%= f.search_field :date_service_cont %>
+      </div>
+      
+      <div class="form-group">
+        <%= f.label :name_cont %>
+        <%= f.search_field :name_cont %>
+      </div>
+  </div>
 
   <%= f.submit %>
 
 <%- if @services.size > 0 %>
 
 <% end %>
-  <ul>
+  <ul class="list-group">
     <% @services.each do |service| %>
-    <div class="paragraph">
-      <p><div class="name"><%= service.name %></div></p>
-      <p><%= service.description %></p>
-      <p><div class="participant_name"><%= service.participants_name %></div></p>
-      <p><%= service.time_spent %></p>
-      <p><%= service.description %></p>
-      </script>
-    </div>
+      <li class="list-group-item">
+        <p><%= service.name %></p>
+        <p><%= service.description %></p>
+        <p><%= service.participants_name %></p>
+        <p><%= service.time_spent %></p>
+        <p><%= service.description %></p>
+      </li>
     <% end%>
   </ul>
 <% end%>

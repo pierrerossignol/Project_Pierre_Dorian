@@ -25,7 +25,13 @@
     <%= f.text_area :time_spent %>
   </div>
 
+    <div class="field">
+    <%= f.label :service_type %><br>
+    <%= f.collection_select :service_type_id, ServiceType.all, :id, :name %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
