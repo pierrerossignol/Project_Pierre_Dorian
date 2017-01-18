@@ -3,3 +3,4 @@ class AddStripeidToUsers < ActiveRecord::Migration
     add_column :users, :stripeid, :string
   end
 end
+
