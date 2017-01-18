@@ -12,7 +12,7 @@ User.delete_all
 s_t = ServiceType.create([{name: 'déménagement'}, {name: 'baby-sitting'}, {name: 'ménage'}, {name: 'livraison'}, {name: 'réparation'}])
 s0 = ServiceType.where(name: 'ménage').first
 
-u = User.new(password: '123456', first_name: 'Pierre', last_name: 'Rossignol', address: '5 avenue Belle-Isle', city: 'Rodez', postal_code: 12000, birthdate: '28/01/1994', job:'Développeur', rating: '5/5', email: 'admin@yahoo.fr', role: true)
+u = User.new(password: '123456', first_name: 'Pierre', last_name: 'Rossignol', address: '5 avenue Belle-Isle', city: 'Rodez', postal_code: 12000, birthdate: '28/01/1994', job:'Développeur', rating: '5/5', email: 'pierre_rossignol@yahoo.fr', role: true)
 u.save
 u.confirm
 
