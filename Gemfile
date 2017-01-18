@@ -26,17 +26,23 @@ gem 'bourbon'
 # Use bootstrap gem for design
 gem 'bootstrap-sass', '~> 3.3.6'
 
+# Design 
+gem "therubyracer"
+# gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+# gem "twitter-bootstrap-rails"
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
 #Design
 gem 'bootstrap-sass', '~> 3.3.6'
 #for research filter
 gem 'ransack'
+#Stripe for prenium's accounts
+gem 'stripe'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

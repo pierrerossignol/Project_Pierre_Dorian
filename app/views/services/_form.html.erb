@@ -1,27 +1,22 @@
 <%= form_for(@service) do |f| %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <b>Nom</b><br>
     <%= f.text_field :name %>
   </div>
 
   <div class="field">
-    <%= f.label :participants_name %><br>
+    <b>Noms des participants</b><br>
     <%= f.text_area :participants_name %>
   </div>
 
-   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_area :name %>
-  </div>
-
   <div class="field">
-    <%= f.label :description %><br>
+    <b>Description</b><br>
     <%= f.text_area :description %>
   </div>
   
-    <div class="field">
-    <%= f.label :time_spent %><br>
+  <div class="field">
+   <b>Durée du service</b><br>
     <%= f.text_area :time_spent %>
   </div>
 
@@ -31,7 +26,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Créer le service" %>
   </div>
 <% end %>
 

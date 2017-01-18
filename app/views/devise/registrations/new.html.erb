@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+		<!-- Website CSS style -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Website Font style -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link rel="stylesheet" href="style.css">
+		<!-- Google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+		<title>Admin</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row main">
+				<div class="main-login main-center">
+				<h5>Formulaire d'inscription AVotreService</h5>
+					<form class="" method="post" action="#">
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Votre prénom</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<%= f.email_field :first_name, autofocus: true, class:'form-control', placeholder:'Entrer votre prénom' %>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Votre nom</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<%= f.email_field :last_name, autofocus: true, class:'form-control', placeholder:'Entrer votre nom' %>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Votre adresse</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<%= f.email_field :address, autofocus: true, class:'form-control', placeholder:'Entrer votre adresse' %>
+								</div>
+							</div>
+						</div>				
+
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Votre ville</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<%= f.email_field :city, autofocus: true, class:'form-control', placeholder:'Entrer votre ville' %>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Votre code postal</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<%= f.email_field :postal_code, autofocus: true, class:'form-control', placeholder:'Entrer votre code postal' %>
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Votre métier</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<%= f.email_field :job, autofocus: true, class:'form-control', placeholder:'Entrer votre métier' %>
+								</div>
+							</div>
+						</div>							
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Votre date de naissance (JJ/MM/AAAA)</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<%= f.email_field :birthdate, autofocus: true, class:'form-control', placeholder:'Entrer votre date de naissance (JJ/MM/AAAA)' %>
+								</div>
+							</div>
+						</div>						
+						
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Votre email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<%= f.email_field :email, autofocus: true, class:'form-control', placeholder:'Entrer votre E-mail' %>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">Votre mot de passe</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                  <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %> caractères minimum)</em>
+                  <% end %><br />
+                  <%= f.password_field :password, autocomplete: "off", class:'form-control', placeholder:'Entrer votre mot de passe' %>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Confirmer votre mot de passe</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<%= f.password_field :password_confirmation, autocomplete: "off", class:'form-control', placeholder:'Confirmer votre mot de passe' %>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group ">
+							 <%= f.submit "S'inscrire", class:'btn btn-primary btn-lg btn-block login-button' %>
+						</div>
+						
+					</form>
+				</div>
+			</div>
+		</div>
+
+		 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
+
+<% end %>
+<%= render "devise/shared/links" %>
+
+
+
+
+
+<!--<h2>Inscription</h2>-->
+
+<!--<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>-->
+<!--  <%= devise_error_messages! %>-->
+
+<!--  <div class="field">-->
+<!--    <p><b>Prénom</b></p>-->
+<!--    <%= f.email_field :first_name, autofocus: true %>-->
+<!--  </div>-->
+  
+<!--  <div class="field">-->
+<!--    <p><b>Nom</b></p>-->
+<!--    <%= f.email_field :last_name, autofocus: true %>-->
+<!--  </div>  -->
+
+<!--  <div class="field">-->
+<!--    <p><b>Adresse</b></p>-->
+<!--    <%= f.email_field :address, autofocus: true %>-->
+<!--  </div>-->
+  
+<!--  <div class="field">-->
+<!--    <p><b>Ville</b></p>-->
+<!--    <%= f.email_field :city, autofocus: true %>-->
+<!--  </div>-->
+  
+<!--  <div class="field">-->
+<!--    <p><b>Code postal</b></p>-->
+<!--    <%= f.email_field :postal_code, autofocus: true %>-->
+<!--  </div>-->
+  
+<!--  <div class="field">-->
+<!--    <p><b>Métier</b></p>-->
+<!--    <%= f.email_field :job, autofocus: true %>-->
+<!--  </div>        -->
+
+<!--  <div class="field">-->
+<!--    <p><b>Date de naissance (JJ/MM/AA)</b></p>-->
+<!--    <%= f.email_field :birthdate, autofocus: true %>-->
+<!--  </div>  -->
+
+<!--  <div class="field">-->
+<!--    <%= f.label :email %><br />-->
+<!--    <%= f.email_field :email, autofocus: true %>-->
+<!--  </div>-->
+
+<!--  <div class="field">-->
+<!--    <p><b>Mot de passe</b></p>-->
+<!--    <% if @minimum_password_length %>-->
+<!--    <em>(<%= @minimum_password_length %> caractères minimum)</em>-->
+<!--    <% end %><br />-->
+<!--    <%= f.password_field :password, autocomplete: "off" %>-->
+<!--  </div>-->
+
+<!--  <div class="field">-->
+<!--    <p><b>Confirmation mot de passe</b></p>-->
+<!--    <%= f.password_field :password_confirmation, autocomplete: "off" %>-->
+<!--  </div>-->
+  
+
+<!--  <div class="actions form-group">-->
+<!--    <%= f.submit "S'inscrire" %>-->
+<!--  </div>-->
+<!--<% end %>-->
+
+<!--<%= render "devise/shared/links" %>-->
