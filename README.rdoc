@@ -34,11 +34,25 @@ Routes -> authentifier
 Model user.
 
 Ajout feature/mailgun :
-Envoi de mail de confirmation pour inscription.
+Envoi de mail de confirmation pour inscription avec la gem mailgun
 
-Ajout feature/administrate
+Ajout feature/administrate:
+Interface administrateur
 
-Ajout feature/users
+Ajout feature/users :
+Gestion des utilisateurs avec la gem divse
+
+Ajout feature/service :
+Gestion de la création des services et de leur recherche
+
+Ajout feature/premium :
+Gestion de l'abonnement avec la gem stripe + formulaire d'abonnement via Bootstrap
+
+Ajout feature/messagerie :
+Messagerie instantanée avec MVC
+
+Ajout feature/design :
+Caroussel + Formulaires Inscription & Connexion via Bootstrap
 
 
 

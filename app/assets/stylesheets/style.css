@@ -13,7 +13,7 @@
 body, html{
      height: 100%;
  	background-repeat: no-repeat;
- 	background:url(http://www.annuaire-web-france.com/wallpaper/internet-web-design/Design-Web-wallpaper-bleu-gris-1280-1024-06.jpg);
+ 	background-image: url('DesignWeb.jpg');
  	font-family: 'Oxygen', sans-serif;
 	    background-size: cover;
 }
